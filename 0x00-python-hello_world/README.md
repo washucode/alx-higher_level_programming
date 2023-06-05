@@ -16,3 +16,11 @@
 
 - **TASK 3. _Print Integer_** - [3-print_number.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/3-print_number.py)
     - Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/3-print_number.py) in order to print the integer stored in the variable number, followed by Battery street, followed by a new line. 
+
+- **TASK 4. _Print Float_** - [4-print_float.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/4-print_float.py)
+    - Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/4-print_float.py) in order to print the float stored in the variable number with a precision of 2 digits.
+    - Use f-strings
+  
+- **TASK 5. _Print Strings_** - [5-print_string.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/4-print_string.py)
+    - Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/5-print_string.py) in order to print the string stored in the variable str three times
+    - Followed by the 9 first characters of str
