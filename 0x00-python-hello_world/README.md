@@ -29,4 +29,5 @@
     - Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/6-concat.py)  to print Welcome to Holberton School!
     - You have to use the variables str1 and str2 in your new line of code
 
+- **TASK 7. _Copy-Cut-Paste.**
 
