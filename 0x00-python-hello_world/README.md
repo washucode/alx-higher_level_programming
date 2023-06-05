@@ -29,5 +29,47 @@
     - Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/6-concat.py)  to print Welcome to Holberton School!
     - You have to use the variables str1 and str2 in your new line of code
 
-- **TASK 7. _Copy-Cut-Paste_**
+- **TASK 7. _Copy-Cut-Paste_** - [7-edges.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/7-edges.py)
+  - Source code [here](https://github.com/alx-tools/0x00.py/blob/master/7-edges.py)
+  - word_first_3 should contain the first 3 letters of the variable word
+  - word_last_2 should contain the last 2 letters of the variable word
+  - middle_word should contain the value of the variable word without the first and last letters
+
+- **TASK 8. _Create a new sentence_** - [8-concat_edges](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/8-concat_edges.py)
+  - Source code [here](https://github.com/alx-tools/0x00.py/blob/master/8-concat_edges.py)
+  - You are not allowed to use any loops or conditional statements
+  - Your program should be exactly 5 lines long
+  - You are not allowed to create new variables
+  - You are not allowed to use string literals
+
+- **TASK 9. _Easter Egg_** - [9-easter_egg.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/9-easter_egg.py)
+  - Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
+
+- **TASK 10. _Linked list cycle_** - [10-check_cycle](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/10-check_cycle.c
+)
+  - Prototype: int check_cycle(listint_t *list);
+  - Return: 0 if there is no cycle, 1 if there is a cycle
+
+- **TASK 11. _Hello, write_** - [100-write.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/100-write.py
+)
+  - Use the function write from the sys module
+  - Your script should print to stderr
+
+- **TASK 12. _Compile_** - [101-compile](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/101-compile
+)
+  - Write a script that compiles a Python script file.
+  - The output filename has to be $PYFILEc
+
+- **TASK 13. _ByteCode -> Python #1_** - [102-magic_calculation.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/102-magic_calculation.py
+)
+  - Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:
+  ```
+   3           0 LOAD_CONST               1 (98)
+              3 LOAD_FAST                0 (a)
+              6 LOAD_FAST                1 (b)
+              9 BINARY_POWER
+             10 BINARY_ADD
+             11 RETURN_VALUE
+   ``` 
+
 
