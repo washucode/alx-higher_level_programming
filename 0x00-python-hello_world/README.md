@@ -24,3 +24,9 @@
 - **TASK 5. _Print Strings_** - [5-print_string.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/4-print_string.py)
     - Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/5-print_string.py) in order to print the string stored in the variable str three times
     - Followed by the 9 first characters of str
+
+- **TASK 6. _Play with strings_** - [6-concat.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x00-python-hello_world/6-concat.py)
+    - Complete this [source code](https://github.com/alx-tools/0x00.py/blob/master/6-concat.py)  to print Welcome to Holberton School!
+    - You have to use the variables str1 and str2 in your new line of code
+
+
