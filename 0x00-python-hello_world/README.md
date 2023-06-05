@@ -1,4 +1,4 @@
-# 0x00-python-hello_world
+# PYTHON HELLO WORLD
 
 ## TASK O
 - Write a Shell script that runs a Python script.
