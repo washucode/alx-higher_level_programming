@@ -14,11 +14,11 @@ int check_cycle(listint_t *list)
     ahead = list;
     if(!list)
         return (0);
-    do {
+    while (behind  && ahead   && ahead->next) {
         behind = behind->next;
         ahead = ahead->next->next;
         if (behind == ahead)
             return (1);
-    } while (behind  && ahead   && ahead->next);
+    } 
     return (0);
 }
