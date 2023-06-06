@@ -62,6 +62,11 @@
     - Prototype: ```def add(a, b):```:
     - Returns value of ``` a + b ```
   
+**11. a ^ b** - [11-pow.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/11-pow.py)
+  - Write a function that prints a string in uppercase followed by a new line.
+    - Prototype: ```def pow(a, b):```:
+    - Returns value of ``` a ^ b```
+  
 
 
 
