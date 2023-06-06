@@ -52,6 +52,9 @@
     - Prototype: ```def uppercase(str)```:
     - You are not allowed to use ```str.upper()``` and ```str.isupper()```
 
+**9.  prints the last digit of a number** - [9-print_last_digit.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/9-print_last_digit.py)
+  - Write a function that prints a string in uppercase followed by a new line.
+    - Prototype: ```def print_last_digit(number):```:
 
 
 
