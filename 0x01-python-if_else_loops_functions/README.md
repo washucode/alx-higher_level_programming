@@ -57,6 +57,13 @@
     - Prototype: ```def print_last_digit(number):```:
 
 
+**10. a + b** - [10-add.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/10-add.py)
+  - Write a function that prints a string in uppercase followed by a new line.
+    - Prototype: ```def add(a, b):```:
+    - Returns value of ``` a + b ```
+  
+
+
 
 
 
