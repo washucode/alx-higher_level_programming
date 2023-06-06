@@ -2,7 +2,7 @@
 
 ## TASKS
 
-**0. Positive anything is better than negative nothing** - [positive_or_negative.py]()
+**0. Positive anything is better than negative nothing** - [positive_or_negative.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/0-positive_or_negative.py)
   - Source Code - [here](https://github.com/alx-tools/0x01.py/blob/master/0-positive_or_negative_py)
     - Output The number, followed by
       - if the number is greater than 0: is positive
@@ -10,7 +10,7 @@
       - if the number is less than 0: is negative followed by a new line
 
 
-**1. The last digit** - [last_digit.py]()
+**1. The last digit** - [last_digit.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/1-last_digit.py)
   - Source Code - [here](https://github.com/alx-tools/0x01.py/blob/master/1-last_digit_py)
     - The string Last digit of, followed by the number, followed by
       - if the last digit is greater than 5: the string and is greater than 5
