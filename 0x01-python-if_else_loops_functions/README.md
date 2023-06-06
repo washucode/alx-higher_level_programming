@@ -27,5 +27,12 @@
 **4. Hexadecimal printing** - [4-print_hexa.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/4-print_hexa.py)
   - Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
 
+**5. 00...99** - [5-print_comb2.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/5-print_comb2.py)
+  - Write a program that prints numbers from 0 to 99.
+    - Numbers must be separated by ,, followed by a space
+    - Numbers should be printed in ascending order, with two digits
+
+
+
 
 
