@@ -4,9 +4,9 @@ def fizzbuzz():
         if num % 3 == 0 and num % 5 == 0:
             res = "FizzBuzz"
         elif num % 3 == 0:
-           res = "Fizz"
+            res = "Fizz"
         elif num % 5 == 0:
-           res = "Buzz"
+            res = "Buzz"
         else:
             res = num
         print("{}".format(res), end=" ")
