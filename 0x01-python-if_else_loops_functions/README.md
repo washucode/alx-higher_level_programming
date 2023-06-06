@@ -47,6 +47,13 @@
     - not allowed to use str.upper() and str.isupper()
     - Tips: ord()
 
+**8. To uppercase** - [8-uppercase.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/8-uppercase.py)
+  - Write a function that prints a string in uppercase followed by a new line.
+    - Prototype: ```def uppercase(str)```:
+    - You are not allowed to use ```str.upper()``` and ```str.isupper()```
+
+
+
 
 
 
