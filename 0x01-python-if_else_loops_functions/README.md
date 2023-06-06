@@ -32,6 +32,23 @@
     - Numbers must be separated by ,, followed by a space
     - Numbers should be printed in ascending order, with two digits
 
+**6. combinations of two digits.** - [6-print_comb3.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/6-print_comb3.py)
+  - Write a program that prints all possible different combinations of two digits.
+    - Numbers must be separated by ,followed by a space
+    - Print only the smallest combination of two digits
+    - Numbers should be printed in ascending order, with two digits
+    - The last number should be followed by a new line
+
+**7. islower** - [7-islower.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/7-islower.py)
+  - Write a function that checks for lowercase character.
+    - Returns True if c is lowercase
+    - Returns False otherwise
+    - not allowed to import any module
+    - not allowed to use str.upper() and str.isupper()
+    - Tips: ord()
+
+
+
 
 
 
