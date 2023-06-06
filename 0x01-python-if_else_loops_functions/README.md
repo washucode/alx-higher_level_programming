@@ -18,13 +18,13 @@
       - if the last digit is less than 6 and not 0: the string and is less than 6 and not 0
       - new line
 
-**2. the alphabet game** - [print_alphabet.py]()
+**2. the alphabet game** - [print_alphabet.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/2-print_alphabet.py)
   - Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
 
-**3. alphabet soup** - [3-print_alphabt.py]()
+**3. alphabet soup** - [3-print_alphabt.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/3-print_alphabt.py)
   - Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
 
-**4. Hexadecimal printing** - [4-print_hexa.py]()
+**4. Hexadecimal printing** - [4-print_hexa.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x01-python-if_else_loops_functions/4-print_hexa.py)
   - Write a program that prints all numbers from 0 to 98 in decimal and in hexadecimal (as in the following example)
 
 
