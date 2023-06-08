@@ -17,54 +17,20 @@
 **4. Who are you?** - [4-hidden_discovery.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/4-hidden_discovery.py)
   - Write a program that prints all the names defined by the compiled module [hidden_4.pyc]() (please download it locally).
 
-**5. 00...99** - [5-print_comb2.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/5-print_comb2.py)
-  - Write a program that prints numbers from 0 to 99.
-    - Numbers must be separated by ,, followed by a space
-    - Numbers should be printed in ascending order, with two digits
+**5.  Everything can be imported** - [5-variable_load.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/5-variable_load.py)
+  
 
-**6. combinations of two digits.** - [6-print_comb3.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/6-print_comb3.py)
+**6.  Build my own calculator!** - [100-my_calculator.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/100-my_calculator.py)
   - Write a program that prints all possible different combinations of two digits.
     - Numbers must be separated by ,followed by a space
     - Print only the smallest combination of two digits
     - Numbers should be printed in ascending order, with two digits
     - The last number should be followed by a new line
 
-**7. islower** - [7-islower.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/7-islower.py)
-  - Write a function that checks for lowercase character.
-    - Returns True if c is lowercase
-    - Returns False otherwise
-    - not allowed to import any module
-    - not allowed to use str.upper() and str.isupper()
-    - Tips: ord()
-
-**8. To uppercase** - [8-uppercase.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/8-uppercase.py)
-  - Write a function that prints a string in uppercase followed by a new line.
-    - Prototype: ```def uppercase(str)```:
-    - You are not allowed to use ```str.upper()``` and ```str.isupper()```
-
-**9.  prints the last digit of a number** - [9-print_last_digit.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/9-print_last_digit.py)
-  - Write a function that prints a string in uppercase followed by a new line.
-    - Prototype: ```def print_last_digit(number):```:
-
-
-**10. a + b** - [10-add.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/10-add.py)
-  - Write a function that prints a string in uppercase followed by a new line.
-    - Prototype: ```def add(a, b):```:
-    - Returns value of ``` a + b ```
+**7. Easy print** - [101-easy_print.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/101-easy_print.py)
   
-**11. a ^ b** - [11-pow.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/11-pow.py)
-  - Write a function that prints a string in uppercase followed by a new line.
-    - Prototype: ```def pow(a, b):```:
-    - Returns value of ``` a ^ b```
+**8.ByteCode -> Python #3** - [102-magic_calculation.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/102-magic_calculation.py)
   
 
-
-
-
-
-
-
-
-
-
-
+**9. Fast alphabet** - [103-fast_alphabet.py](https://github.com/washucode/alx-higher_level_programming/blob/main/0x02-python-import_modules/103-fast_alphabet.py)
+ 
