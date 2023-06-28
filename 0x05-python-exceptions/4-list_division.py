@@ -4,8 +4,9 @@
 def list_division(my_list_1, my_list_2, list_length):
     """a function that divides element by element 2 lists."""
     newlist = []
+    result = 0
 
-    for e in range(len(my_list_1)):
+    for e in range(list_length):
         try:
             result = my_list_1[e] / my_list_2[e]
         except ZeroDivisionError:
