@@ -3,8 +3,17 @@
 """
 
 
-class Rectangle():
+class Rectangle:
     """ Class creates private instance attributes width and height
+    Attributes:
+        width: width of the rectangle
+        height: height of the rectangle
+    Functions:
+        __init__(self, width=0, height=0): initializes width and height
+        width(self): getter method retrieves the width
+        width(self, value): setter method sets the width
+        height(self): getter method retrieves the height
+        height(self, value): setter method sets the height
     """
 
     def __init__(self, width=0, height=0):
