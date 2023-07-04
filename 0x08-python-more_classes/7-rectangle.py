@@ -13,6 +13,12 @@ class Rectangle:
         width(self, value): setter method sets the width
         height(self): getter method retrieves the height
         height(self, value): setter method sets the height
+        area(self): returns the rectangle area
+        perimeter(self): returns the rectangle perimeter
+        __str__(self): prints rectangle using #
+        __repr__(self): returns a string representation of the rectangle
+        __del__(self): prints a message when an instance is deleted
+
     """
 
     number_of_instances = 0
@@ -22,7 +28,7 @@ class Rectangle:
         """initializes width and height"""
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
+        self.__class__.number_of_instances += 1
 
     @property
     def height(self):
@@ -69,7 +75,8 @@ class Rectangle:
         """prints the rectangle"""
         if self.__height == 0 or self.__width == 0:
             return ""
-        return ((str(self.print_symbol) * self.__width) + "\n") * self.__height
+        return "\n".join([str(self.print_symbol) * self.__width for row in
+                          range(self.__height)])
 
     def __repr__(self):
         """returns a string representation of the rectangle"""
@@ -78,4 +85,4 @@ class Rectangle:
     def __del__(self):
         """prints a message when an instance is deleted"""
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
+        self.__class__.number_of_instances -= 1
