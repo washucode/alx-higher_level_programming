@@ -5,36 +5,21 @@
 
 class Rectangle:
     """class creates private instance attributes width and height
-    Attributes:
-        width (int): width of the rectangle
-        height (int): height of the rectangle
     """
 
     def __init__(self, width=0, height=0):
-        """init method initializes y private instance attributes"""
-        self.__height = height
-        self.__width = width
+        """initializes width and height"""
+        self.height = height
+        self.width = width
 
     @property
     def height(self):
-        """__height getter method retrieves the height
-        Args:
-            self: instance method
-        Return:
-            __height
-        """
+        """__height getter method retrieves the height"""
         return self.__height
 
     @height.setter
     def height(self, value):
         """height is int and is positive
-        Args:
-            value (int): height of the rectangle
-        Raises:
-                TypeError: height must be an integer
-                ValueError: height must be >= 0
-        returns:
-            height
         """
 
         if not isinstance(value, int):
@@ -45,25 +30,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """__width getter method retrieves the width
-        Args:
-            self: instance method
-        Return:
-            __width
-        """
+        """__width getter method retrieves the width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """width is int and is positive
-        Args:
-            value (int): width of the rectangle
-            Raises:
-                TypeError: width must be an integer
-                ValueError: width must be >= 0
-        returns:
-            width
-        """
+        """width is int and is positive"""
 
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
