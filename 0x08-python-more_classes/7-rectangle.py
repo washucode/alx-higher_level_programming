@@ -1,6 +1,7 @@
 #!usr/bin/python3
 """Defines a class Rectangle."""
 
+
 class Rectangle:
     """ Class creates private instance attributes width and height
     Attributes:
@@ -63,17 +64,17 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return (self.__height * 2) + (self.__width * 2)
-    
+
     def __str__(self):
         """prints the rectangle"""
         if self.__height == 0 or self.__width == 0:
             return ""
         return ((str(self.print_symbol) * self.__width) + "\n") * self.__height
-    
+
     def __repr__(self):
         """returns a string representation of the rectangle"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
-    
+
     def __del__(self):
         """prints a message when an instance is deleted"""
         print("Bye rectangle...")
