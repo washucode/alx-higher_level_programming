@@ -18,7 +18,6 @@ class Rectangle:
         __str__(self): returns a string of rectangle using #
         __repr__(self): returns a string of rectangle using eval
         __del__(self): prints a message when an instance is deleted
-        bigger_or_equal(rect_1, rect_2): returns the bigger rectangle
     """
 
     number_of_instances = 0
@@ -27,7 +26,22 @@ class Rectangle:
         """initializes width and height"""
         self.height = height
         self.width = width
-        Rectangle.number_of_instances += 1
+        self.__class__.number_of_instances += 1
+
+    def __str__(self):
+        """returns string of rectangle using #"""
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        return "\n".join(["#" * self.__width for i in range(self.__height)])
+
+    def __repr__(self):
+        """returns string representation of rectangle"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """prints message when instance is deleted"""
+        print("Bye rectangle...")
+        self.__class__.number_of_instances -= 1
 
     @property
     def height(self):
@@ -69,17 +83,3 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return (self.__height * 2) + (self.__width * 2)
-
-    def __str__(self):
-        """returns string of rectangle using #"""
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        return "\n".join(["#" * self.__width for i in range(self.__height)])
-
-    def __repr__(self):
-        """returns string representation of rectangle"""
-        return "Rectangle({}, {})".format(self.__width, self.__height)
-
-    def __del__(self):
-        """prints message when instance is deleted"""
-        print("Bye rectangle...")
