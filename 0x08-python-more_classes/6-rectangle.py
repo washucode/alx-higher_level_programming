@@ -19,7 +19,6 @@ class Rectangle:
         __repr__(self): returns a string of rectangle using eval
         __del__(self): prints a message when an instance is deleted
     """
-
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
