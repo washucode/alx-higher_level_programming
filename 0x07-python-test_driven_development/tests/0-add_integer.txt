@@ -79,12 +79,10 @@ Checking missing one argument:
 -------------------------
 	 >>> add_integer(7)
 	 Traceback (most recent call last):
-         ...
-	 TypeError: add_integer() missing 1 required positional argument: 'b'
+	 TypeError: add_integer() missing 1 required positional argument: 'p'
 
 Checking missing two arguments:
 -------------------------
 	 >>> add_integer()
 	 Traceback (most recent call last):
-         ...
-	 TypeError: add_integer() missing 2 required positional argument: 'a' and 'b'
+	 TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b

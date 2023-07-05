@@ -21,4 +21,8 @@ def add_integer(a, b=98):
         a = int(a)
     if type(b) is float:
         b = int(b)
+    if a == float('inf') or b == float('inf'):
+        raise OverflowError("cannot convert float infinity to integer")
+    if a == float('nan') or b == float('nan'):
+        raise ValueError("cannot convert float NaN to integer")
     return a + b
