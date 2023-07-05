@@ -16,17 +16,22 @@ Check for docstring:
     >>> len(doc) > 1
     True
 
-Both Inputs integers:
+Checking Regular addition:
 --------------------
     >>> add_integer(5,6)
     11
 
-One float number:
+Checking One float number (a):
 ----------------
     >>> add_integer(2.5, 8)
     10
 
-Two floats :
+Checking One float number (b):
+----------------
+    >>> add_integer(2, 8.5)
+    10
+
+Checking Two floats :
 -----------
     >>> add_integer(3.6, 5.5)
     8
@@ -36,7 +41,13 @@ Checking negative and positive:
     >>> add_integer(-8, 5)
     -3
 
-Checking a is  number b is non-number:
+Checking positive and negative: 
+-------------------------------
+    >>> add_integer(10, -5)
+    5
+
+
+Checking a is  number b is non-number():
 -------------------------------------
 	>>> add_integer(6, "yes")
 	Traceback (most recent call last):
@@ -50,5 +61,30 @@ Checking a is  non number b is number:
 	...
 	TypeError: a must be an integer
 
+Checking for passed NaN:
+------------------------
+	 >>> add_integer(9, float('nan'))
+	 Traceback (most recent call last):
+	 ...
+	 ValueError: cannot convert float NaN to integer
 
+Checking for passed inf:
+------------------------
+	 >>> add_integer(10, float('inf'))
+	 Traceback (most recent call last):
+	 ...
+	 OverflowError: cannot convert float infinity to integer
 
+Checking missing one argument:
+-------------------------
+	 >>> add_integer(7)
+	 Traceback (most recent call last):
+         ...
+	 TypeError: add_integer() missing 1 required positional argument: 'b'
+
+Checking missing two arguments:
+-------------------------
+	 >>> add_integer()
+	 Traceback (most recent call last):
+         ...
+	 TypeError: add_integer() missing 2 required positional argument: 'a' and 'b'
