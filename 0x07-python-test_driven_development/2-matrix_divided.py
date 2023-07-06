@@ -33,7 +33,6 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    
-    newMatrix = list(map(lambda row:
-                          list(map(lambda e: round(e/div, 2), row)), matrix))
-    return newMatrix
+    x = list(map(lambda row:
+                 list(map(lambda x: round(x/div, 2), row)), matrix))
+    return x
