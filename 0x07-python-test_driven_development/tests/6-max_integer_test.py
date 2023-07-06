@@ -92,6 +92,13 @@ class testMaxInteger(unittest.TestCase):
         x = [4, 2, 3, 1]
         self.assertEqual(max_integer(x), 4)
     
+    def test_MaxAtMiddle(self):
+        """
+        Test max at middle
+        """
+        x = [1, 2, 4, 3, 2]
+        self.assertEqual(max_integer(x), 4)
+    
     def test_oneNegative(self):
         """
         Test one negative
