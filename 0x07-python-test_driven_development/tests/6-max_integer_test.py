@@ -85,6 +85,21 @@ class testMaxInteger(unittest.TestCase):
         with self.assertRaises(TypeError):
             max_integer(None)
 
+    def test_maxAtBeginning(self):
+        """
+        Test max at beginning
+        """
+        x = [4, 2, 3, 1]
+        self.assertEqual(max_integer(x), 4)
+    
+    def test_oneNegative(self):
+        """
+        Test one negative
+        """
+        x = [-1,5,6,7]
+        self.assertEqual(max_integer(x), 7)
+
+
 if __name__ == '__main__':
     unittest.main()
         
