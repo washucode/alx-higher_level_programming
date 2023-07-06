@@ -1,0 +1,43 @@
+=================================
+Doctest for module ```3-say_my_name````
+=================================
+
+------------------------------
+Tests using ``say_my_name``
+------------------------------
+
+Import Module:
+--------------
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Checking NORMAL:
+-----------------------
+	 >>> say_my_name("eSTHER", "WACHUKA")
+	 My name is eSTHER WACHUKA
+
+Checking for wrong type as first name:
+--------------------------------------
+         >>> say_my_name(10, "ESther")
+         Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for wrong type as last name:
+--------------------------------------
+         >>> say_my_name("Yay", [40])
+         Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string
+
+Checking missing 2 args:
+------------------------------
+	 >>> say_my_name()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Checking more than 2 args:
+--------------------------
+    >>> say_my_name("hallo", "world", "heere")
+    Traceback (most recent call last):
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
