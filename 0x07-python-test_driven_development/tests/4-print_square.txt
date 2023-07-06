@@ -1,0 +1,40 @@
+=================================
+Doctest for module ```4-print_square````
+=================================
+
+------------------------------
+Tests using ``print_square``
+------------------------------
+
+Import Module:
+--------------
+        >>> print_square = __import__('4-print_square').print_square
+
+Checking NORMAL:
+-----------------------
+>>> print_square(4)
+####
+####
+####
+####
+
+Checking for wrong type as size:
+--------------------------------------
+         >>> print_square("ESther")
+         Traceback (most recent call last):
+         ...
+         TypeError: size must be an integer
+
+Checking for size less than 0:
+--------------------------------------
+         >>> print_square(-3)
+         Traceback (most recent call last):
+         ...
+         ValueError: size must be >= 0
+
+Checking missing 1 argument:
+------------------------------
+	    >>> print_square()
+	    Traceback (most recent call last):
+	    ...
+	    TypeError: print_square() missing 1 required positional argument: 'size'
