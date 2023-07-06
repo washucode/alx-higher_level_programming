@@ -1,0 +1,74 @@
+=============================================
+Doctest for module: ```5-text_indentation```
+=============================================
+
+
+Import Module: 
+--------------
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Checking normal working of the function
+---------------------------------------
+>>> text_indentation("Esther is a good student.She is good at coding:she is also very lovely?")
+Esther is a good student.
+<BLANKLINE>
+She is good at coding:
+<BLANKLINE>
+she is also very lovely?
+<BLANKLINE>
+
+Checking text not string:
+-------------------------
+>>> text_indentation(6)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Checking missing 1 argument:
+-------------------------
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Checking for spaces:
+--------------------
+>>> text_indentation("   Hello.You're good?   ")
+   Hello.
+<BLANKLINE>
+You're good?
+<BLANKLINE>
+<BLANKLINE>
+
+Checking for standalone special chars:
+---------------------------------------
+>>> text_indentation(" . ? : ")
+ .
+<BLANKLINE>
+ ?
+<BLANKLINE>
+ :
+<BLANKLINE>
+<BLANKLINE>
+
+Checking for one word:
+----------------------
+>>> text_indentation("Hello")
+Hello
+
+Checking for newline/blankline :
+----------------------
+>>> text_indentation(" \nHello\n. World?")
+<BLANKLINE>
+Hello
+.
+<BLANKLINE>
+ World?
+<BLANKLINE>
+ 
+Checking for newline at end:
+>>> text_indentation("Hello, how are you?\n")
+Hello, how are you?
+<BLANKLINE>
+<BLANKLINE>
