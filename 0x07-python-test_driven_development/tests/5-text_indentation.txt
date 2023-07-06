@@ -6,7 +6,7 @@ Doctest for module: ```5-text_indentation```
 Import Module: 
 --------------
 
->>> text_indentation = __import__("5-text_indentation").text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Checking normal working of the function
 ---------------------------------------
@@ -17,6 +17,15 @@ She is good at coding:
 <BLANKLINE>
 she is also very lovely?
 <BLANKLINE>
+
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
 
 Checking text not string:
 -------------------------
@@ -35,21 +44,19 @@ TypeError: text_indentation() missing 1 required positional argument: 'text'
 Checking for spaces:
 --------------------
 >>> text_indentation("   Hello.You're good?   ")
-   Hello.
+Hello.
 <BLANKLINE>
 You're good?
-<BLANKLINE>
 <BLANKLINE>
 
 Checking for standalone special chars:
 ---------------------------------------
 >>> text_indentation(" . ? : ")
- .
+.
 <BLANKLINE>
- ?
+?
 <BLANKLINE>
- :
-<BLANKLINE>
+:
 <BLANKLINE>
 
 Checking for one word:
@@ -64,7 +71,7 @@ Checking for newline/blankline :
 Hello
 .
 <BLANKLINE>
- World?
+World?
 <BLANKLINE>
  
 Checking for newline at end:
