@@ -4,7 +4,7 @@ BaseGeometry tests
 
 Import
 ------
->>> BaseGeometry = __import('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
 
 Checking with positive integer
@@ -21,7 +21,7 @@ Checking with 3 arguments
 --------------------------
    >>> bg.integer_validator("numbers", 0, 1)
    Traceback (most recent call last):
-   TypeError: integer_validator() takes 3 positional arguments but 4 were given
+   TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
 Checking with infinite int 
 ----------------------------
