@@ -4,7 +4,7 @@ Tests for class MyList
 
 Import:
 -------
->>> MyList = __import__('1-my_list).MyList
+>>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
 >>> type(my_list)
 <class '1-my_list.MyList'>
@@ -42,7 +42,7 @@ Checking negative values
 >>> print(my_list2)
 [-1, 0, -3, -8]
 >>> my_list2.print_sorted()
-[-8,-3,-1,0]
+[-8, -3, -1, 0]
 
 Checking NULL object
 --------------------
