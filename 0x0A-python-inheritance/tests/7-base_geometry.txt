@@ -6,25 +6,46 @@ Import
 ------
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> bg = BaseGeometry()
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
+
 
 Checking with positive integer
 ------------------------------
-   >>> bg.integer_validator("my_int", 89)
+>>> bg.integer_validator("my_int", 89)
+
+Checking with non integer
+------------------------------
+>>> bg.integer_validator("number", "number")
+Traceback (most recent call last):
+TypeError: number must be an integer
+
+>>> bg.integer_validator("another", [3])
+Traceback (most recent call last):
+TypeError: another must be an integer
+
+>>> bg.integer_validator("more testing", {3, 4})
+Traceback (most recent call last):
+TypeError: more testing must be an integer
+
+>>> bg.integer_validator("invalid", None)
+Traceback (most recent call last):
+TypeError: invalid must be an integer
 
 Checking with positive integer
 ------------------------------
-   >>> bg.integer_validator("distance", -12)
-   Traceback (most recent call last):
-   ValueError: distance must be greater than 0
+>>> bg.integer_validator("distance", -12)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
 
 Checking with 3 arguments
 --------------------------
-   >>> bg.integer_validator("numbers", 0, 1)
-   Traceback (most recent call last):
-   TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+>>> bg.integer_validator("numbers", 0, 1)
+Traceback (most recent call last):
+TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
 
 Checking with infinite int 
 ----------------------------
-   >>> bg.integer_validator("infnumber", int('inf'))
-   Traceback (most recent call last):
-   ValueError: invalid literal for int() with base 10: 'inf'
+>>> bg.integer_validator("infnumber", int('inf'))
+Traceback (most recent call last):
+ValueError: invalid literal for int() with base 10: 'inf'
