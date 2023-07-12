@@ -1,0 +1,30 @@
+========================================
+BaseGeometry tests 
+========================================
+
+Import
+------
+>>> BaseGeometry = __import('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+Checking with positive integer
+------------------------------
+   >>> bg.integer_validator("my_int", 89)
+
+Checking with positive integer
+------------------------------
+   >>> bg.integer_validator("distance", -12)
+   Traceback (most recent call last):
+   ValueError: distance must be greater than 0
+
+Checking with 3 arguments
+--------------------------
+   >>> bg.integer_validator("numbers", 0, 1)
+   Traceback (most recent call last):
+   TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Checking with infinite int 
+----------------------------
+   >>> bg.integer_validator("infnumber", int('inf'))
+   Traceback (most recent call last):
+   ValueError: invalid literal for int() with base 10: 'inf'
