@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 """Add item module"""
-import json
 import sys
 from os import path
 
@@ -16,5 +15,5 @@ if __name__ == "__main__":
     else:
         pylistlist = []
     for i in range(1, len(sys.argv)):
-        py.append(sys.argv[i])
+        pylist.append(sys.argv[i])
     save_to_json_file(pylist, filename)
