@@ -16,5 +16,5 @@ def add_item(args):
         pylist = load_from_json_file(filename)
     else:
         pylist = []
-    pylist.extend(sys.argv[1:])
+    pylist.extend(args)
     save_to_json_file(pylist, filename)
