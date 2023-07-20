@@ -143,34 +143,34 @@ class TestRectangle(TestCase):
     def test_str(self):
         """ Test for str """
         new23 = Rectangle(4, 6, 2, 1, 12)
-        self.assertEqual(new23.str(), "[Rectangle] (12) 2/1 - 4/6")
+        self.assertEqual(new23.__str__(), "[Rectangle] (12) 2/1 - 4/6")
 
     def test_str2(self):
         """ Test for str """
         new24 = Rectangle(4, 6, 2, 1)
-        self.assertEqual(new24.str(), "[Rectangle] (1) 2/1 - 4/6")
+        self.assertEqual(new24.__str__(), "[Rectangle] (1) 2/1 - 4/6")
 
     def test_update(self):
         """ Test for update """
         new25 = Rectangle(10, 10, 10, 10)
         new25.update(89)
-        self.assertEqual(new25.str(), "[Rectangle] (89) 10/10 - 10/10") 
+        self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 10/10") 
         new25.update(89, 2)
-        self.assertEqual(new25.str(), "[Rectangle] (89) 10/10 - 2/10")
+        self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 2/10")
         new25.update(89, 2, 3)
-        self.assertEqual(new25.str(), "[Rectangle] (89) 10/10 - 2/3")
+        self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 2/3")
         new25.update(89, 2, 3, 4)
-        self.assertEqual(new25.str(), "[Rectangle] (89) 4/10 - 2/3")
+        self.assertEqual(new25.__str__(), "[Rectangle] (89) 4/10 - 2/3")
         new25.update(89, 2, 3, 4, 5)
-        self.assertEqual(new25.str(), "[Rectangle] (89) 4/5 - 2/3")
+        self.assertEqual(new25.__str__(), "[Rectangle] (89) 4/5 - 2/3")
 
     def test_update2(self):
         """ Test for update """
         new26 = Rectangle(10, 10, 10, 10)
         new26.update(89, 2, 3, 4, 5)
-        self.assertEqual(new26.str(), "[Rectangle] (89) 4/5 - 2/3")
+        self.assertEqual(new26.__str__(), "[Rectangle] (89) 4/5 - 2/3")
         new26.update(89, 2, 3, 4, 5, 6)
-        self.assertEqual(new26.str(), "[Rectangle] (89) 4/5 - 2/3")
+        self.assertEqual(new26.____str____(), "[Rectangle] (89) 4/5 - 2/3")
 
     def test_dictionary(self):
         """ Test for dictionary """
@@ -195,7 +195,7 @@ class TestRectangle(TestCase):
         """ Test for create """
         new27 = Rectangle(3, 5, 1, 2, 3)
         new28 = Rectangle.create(**new27.to_dictionary())
-        self.assertEqual(new27.str(), new28.str())
+        self.assertEqual(new27.__str__(), new28.__str__())
         self.assertFalse(new27 is new28)
         self.assertFalse(new27 == new28)
 
@@ -209,7 +209,7 @@ class TestRectangle(TestCase):
         self.assertEqual(new28.height, 5)
         self.assertEqual(new28.x, 1)
         self.assertEqual(new28.y, 2)
-        self.assertEqual(new27.str(), new28.str())
+        self.assertEqual(new27.__str__(), new28.__str__())
         self.assertFalse(new27 is new28)
         self.assertFalse(new27 == new28)
 
@@ -220,8 +220,8 @@ class TestRectangle(TestCase):
         list1 = [new29, new30]
         Rectangle.save_to_file(list1)
         list2 = Rectangle.load_from_file()
-        self.assertEqual(list2[0].str(), "[Rectangle] (3) 1/2 - 3/5")
-        self.assertEqual(list2[1].str(), "[Rectangle] (4) 2/3 - 4/6")
+        self.assertEqual(list2[0].__str__(), "[Rectangle] (3) 1/2 - 3/5")
+        self.assertEqual(list2[1].__str__(), "[Rectangle] (4) 2/3 - 4/6")
         self.assertFalse(list1 is list2)
         self.assertFalse(list1 == list2)
 

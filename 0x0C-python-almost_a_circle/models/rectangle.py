@@ -23,7 +23,7 @@ class Rectangle(Base):
         for i in range(self.height):
             print("#" * self.width)
 
-    def str(self):
+    def __str__(self):
         """ Returns string representation of Rectangle """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
@@ -48,13 +48,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ Returns dictionary representation of Rectangle """
-        return {
-            "id": self.id,
-            "width": self.width,
-            "height": self.height,
-            "x": self.x,
-            "y": self.y
-        }
+        list_to_dict = ["id", "width", "height", "x", "y"]
+        return {key: getattr(self, key) for key in list_to_dict}
 
     # Getters and setters
     @property
