@@ -16,17 +16,17 @@ class Rectangle(Base):
 
     def area(self):
         """ Returns the area of the rectangle """
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """ Prints the rectangle using # """
-        for i in range(self.__height):
-            print("#" * self.__width)
+        for i in range(self.height):
+            print("#" * self.width)
 
     def str(self):
         """ Returns string representation of Rectangle """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-            self.id, self.__x, self.__y, self.__width, self.__height)
+            self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """ Updates attributes of Rectangle """
@@ -35,13 +35,13 @@ class Rectangle(Base):
                 if i == 0:
                     self.id = arg
                 elif i == 1:
-                    self.__width = arg
+                    self.width = arg
                 elif i == 2:
-                    self.__height = arg
+                    self.height = arg
                 elif i == 3:
-                    self.__x = arg
+                    self.x = arg
                 elif i == 4:
-                    self.__y = arg
+                    self.y = arg
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
@@ -50,10 +50,10 @@ class Rectangle(Base):
         """ Returns dictionary representation of Rectangle """
         return {
             "id": self.id,
-            "width": self.__width,
-            "height": self.__height,
-            "x": self.__x,
-            "y": self.__y
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
         }
 
     # Getters and setters

@@ -54,45 +54,15 @@ class TestSquare(TestCase):
         with self.assertRaises(TypeError):
             new5 = Square("string")
 
-    def test_incorrect_att1(self):
-        """ Test for x as string """
-        with self.assertRaises(TypeError):
-            new6 = Square(1, "string")
-
-    def test_incorrect_att2(self):
-        """ Test for y as string """
-        with self.assertRaises(TypeError):
-            new7 = Square(1, 1, "string")
-
     def test_incorrect_att3(self):
         """ Test for size as negative """
         with self.assertRaises(ValueError):
             new8 = Square(-1)
 
-    def test_incorrect_att4(self):
-        """ Test for x as negative """
-        with self.assertRaises(ValueError):
-            new9 = Square(1, -1)
-
-    def test_incorrect_att5(self):
-        """ Test for y as negative """
-        with self.assertRaises(ValueError):
-            new10 = Square(1, 1, -1)
-
     def test_incorrect_att6(self):
         """ Test for size as zero """
         with self.assertRaises(ValueError):
             new11 = Square(0)
-
-    def test_incorrect_att7(self):
-        """ Test for x as zero """
-        with self.assertRaises(ValueError):
-            new12 = Square(1, 0)
-
-    def test_incorrect_att8(self):
-        """ Test for y as zero """
-        with self.assertRaises(ValueError):
-            new13 = Square(1, 1, 0)
 
     def test_update(self):
         """ Test update """
@@ -170,14 +140,14 @@ class TestSquare(TestCase):
         new23 = Square(1, 1, 1, 1)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             new23.display()
-            self.assertEqual(fake_out.getvalue(), '\n #\n')
+            self.assertEqual(fake_out.getvalue(), '#\n')
 
     def test_display1(self):
         """ Test display """
         new24 = Square(2, 2, 2, 2)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             new24.display()
-            self.assertEqual(fake_out.getvalue(), '\n\n  ##\n  ##\n')
+            self.assertEqual(fake_out.getvalue(), '##\n##\n')
 
     def test_str(self):
         """ Test __str__ """

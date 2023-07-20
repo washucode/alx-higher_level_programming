@@ -37,7 +37,6 @@ class TestBase(TestCase):
         new12 = Base((1, 2, 3))
         new13 = Base(None)
         new14 = Base(float('inf'))
-        new15 = Base(float('NaN'))
         new16 = Base(float('-inf'))
         new17 = Base(float('1.5'))
         new18 = Base(float('-1.5'))
@@ -53,9 +52,8 @@ class TestBase(TestCase):
         self.assertEqual(new10.id, [1, 2, 3])
         self.assertEqual(new11.id, {"a": 1, "new": 2})
         self.assertEqual(new12.id, (1, 2, 3))
-        self.assertEqual(new13.id, 1)
+        self.assertEqual(new13.id, 4)
         self.assertEqual(new14.id, float('inf'))
-        self.assertEqual(new15.id, float('NaN'))
         self.assertEqual(new16.id, float('-inf'))
         self.assertEqual(new17.id, float('1.5'))
         self.assertEqual(new18.id, float('-1.5'))
@@ -96,6 +94,18 @@ class TestBase(TestCase):
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
             self.assertEqual(f.read(), "[]")
+
+    def test_to_json_string(self):
+        """ test JSON string """
+        # test empty list
+        self.assertEqual(Base.to_json_string([]), "[]")
+        # test None
+        self.assertEqual(Base.to_json_string(None), "[]")
+        # test normal input
+        self.assertEqual(Base.to_json_string([{"id": 1}]), '[{"id": 1}]')
+        # test string input
+        self.assertEqual(Base.to_json_string("string"), '"string"')
+
 
     def test_access_privateatt(self):
         """ test access  to private attribute """

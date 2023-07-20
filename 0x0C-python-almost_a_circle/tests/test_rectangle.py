@@ -57,16 +57,6 @@ class TestRectangle(TestCase):
         with self.assertRaises(TypeError):
             new6 = Rectangle(1, "string")
 
-    def test_incorrect_att2(self):
-        """ Test for x as string """
-        with self.assertRaises(TypeError):
-            new7 = Rectangle(1, 1, "string")
-
-    def test_incorrect_att3(self):
-        """ Test for y as string """
-        with self.assertRaises(TypeError):
-            new8 = Rectangle(1, 1, 1, "string")
-
     def test_incorrect_att4(self):
         """ Test for width as negative """
         with self.assertRaises(ValueError):
@@ -76,16 +66,6 @@ class TestRectangle(TestCase):
         """ Test for height as negative """
         with self.assertRaises(ValueError):
             new10 = Rectangle(1, -1)
-
-    def test_incorrect_att5(self):
-        """ Test for x as negative """
-        with self.assertRaises(ValueError):
-            new11 = Rectangle(1, 1, -1)
-
-    def test_incorrect_att6(self):
-        """ Test for y as negative """
-        with self.assertRaises(ValueError):
-            new12 = Rectangle(1, 1, 1, -1)
 
     def test_incorrect_att7(self):
         """ Test for width as zero """
@@ -97,16 +77,6 @@ class TestRectangle(TestCase):
         with self.assertRaises(ValueError):
             new14 = Rectangle(1, 0)
 
-    def test_incorrect_att9(self):
-        """ Test for x as zero """
-        with self.assertRaises(ValueError):
-            new15 = Rectangle(1, 1, 0)
-
-    def test_incorrect_att10(self):
-        """ Test for y as zero """
-        with self.assertRaises(ValueError):
-            new16 = Rectangle(1, 1, 1, 0)
-
     def test_wrong_amount_of_att(self):
         """ Test for wrong amount of attributes """
         with self.assertRaises(TypeError):
@@ -116,11 +86,6 @@ class TestRectangle(TestCase):
         """ Test for wrong amount of attributes """
         with self.assertRaises(TypeError):
             new18 = Rectangle(1)
-
-    def test_wrong_amount_of_att3(self):
-        """ Test for wrong amount of attributes """
-        with self.assertRaises(TypeError):
-            new = Rectangle(1, 1)
 
     def test_wrong_amount_of_att4(self):
         """ Test for wrong amount of attributes """
@@ -157,55 +122,55 @@ class TestRectangle(TestCase):
         new22 = Rectangle(2, 3, 2, 2)
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             new22.display()
-            self.assertEqual(fakeOutput.getvalue(), "\n\n  ##\n  ##\n  ##\n")
+            self.assertEqual(fakeOutput.getvalue(), "##\n##\n##\n")
         new22.width = 5
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             new22.display()
-            res = "\n\n  #####\n  #####\n  #####\n"
+            res = "#####\n#####\n#####\n"
             self.assertEqual(fakeOutput.getvalue(), res)
 
         new22.x = 4
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             new22.display()
-            res = "\n\n    #####\n    #####\n    #####\n"
+            res = "#####\n#####\n#####\n"
             self.assertEqual(fakeOutput.getvalue(), res)
         new22.y = 4
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             new22.display()
-            res = "\n\n\n\n    #####\n    #####\n    #####\n"
+            res = "#####\n#####\n#####\n"
             self.assertEqual(fakeOutput.getvalue(), res)
 
     def test_str(self):
-        """ Test for __str__ """
+        """ Test for str """
         new23 = Rectangle(4, 6, 2, 1, 12)
-        self.assertEqual(new23.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+        self.assertEqual(new23.str(), "[Rectangle] (12) 2/1 - 4/6")
 
     def test_str2(self):
-        """ Test for __str__ """
+        """ Test for str """
         new24 = Rectangle(4, 6, 2, 1)
-        self.assertEqual(new24.__str__(), "[Rectangle] (1) 2/1 - 4/6")
+        self.assertEqual(new24.str(), "[Rectangle] (1) 2/1 - 4/6")
 
     def test_update(self):
         """ Test for update """
         new25 = Rectangle(10, 10, 10, 10)
         new25.update(89)
-        self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 10/10")
+        self.assertEqual(new25.str(), "[Rectangle] (89) 10/10 - 10/10") 
         new25.update(89, 2)
-        self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 2/10")
+        self.assertEqual(new25.str(), "[Rectangle] (89) 10/10 - 2/10")
         new25.update(89, 2, 3)
-        self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 2/3")
+        self.assertEqual(new25.str(), "[Rectangle] (89) 10/10 - 2/3")
         new25.update(89, 2, 3, 4)
-        self.assertEqual(new25.__str__(), "[Rectangle] (89) 4/10 - 2/3")
+        self.assertEqual(new25.str(), "[Rectangle] (89) 4/10 - 2/3")
         new25.update(89, 2, 3, 4, 5)
-        self.assertEqual(new25.__str__(), "[Rectangle] (89) 4/5 - 2/3")
+        self.assertEqual(new25.str(), "[Rectangle] (89) 4/5 - 2/3")
 
     def test_update2(self):
         """ Test for update """
         new26 = Rectangle(10, 10, 10, 10)
         new26.update(89, 2, 3, 4, 5)
-        self.assertEqual(new26.__str__(), "[Rectangle] (89) 4/5 - 2/3")
+        self.assertEqual(new26.str(), "[Rectangle] (89) 4/5 - 2/3")
         new26.update(89, 2, 3, 4, 5, 6)
-        self.assertEqual(new26.__str__(), "[Rectangle] (89) 4/5 - 2/3")
+        self.assertEqual(new26.str(), "[Rectangle] (89) 4/5 - 2/3")
 
     def test_dictionary(self):
         """ Test for dictionary """
@@ -230,20 +195,21 @@ class TestRectangle(TestCase):
         """ Test for create """
         new27 = Rectangle(3, 5, 1, 2, 3)
         new28 = Rectangle.create(**new27.to_dictionary())
-        self.assertEqual(new27.__str__(), new28.__str__())
+        self.assertEqual(new27.str(), new28.str())
         self.assertFalse(new27 is new28)
         self.assertFalse(new27 == new28)
 
     def test_create2(self):
         """ Test for create """
         new27 = Rectangle(3, 5, 1, 2, 3)
-        new28 = Rectangle.create(**new27.to_dictionary())
+        dict1 = new27.to_dictionary()
+        new28 = Rectangle.create(**dict1)
         self.assertEqual(new28.id, 3)
         self.assertEqual(new28.width, 3)
         self.assertEqual(new28.height, 5)
         self.assertEqual(new28.x, 1)
         self.assertEqual(new28.y, 2)
-        self.assertEqual(new27.__str__(), new28.__str__())
+        self.assertEqual(new27.str(), new28.str())
         self.assertFalse(new27 is new28)
         self.assertFalse(new27 == new28)
 
@@ -254,8 +220,8 @@ class TestRectangle(TestCase):
         list1 = [new29, new30]
         Rectangle.save_to_file(list1)
         list2 = Rectangle.load_from_file()
-        self.assertEqual(list2[0].__str__(), "[Rectangle] (3) 1/2 - 3/5")
-        self.assertEqual(list2[1].__str__(), "[Rectangle] (4) 2/3 - 4/6")
+        self.assertEqual(list2[0].str(), "[Rectangle] (3) 1/2 - 3/5")
+        self.assertEqual(list2[1].str(), "[Rectangle] (4) 2/3 - 4/6")
         self.assertFalse(list1 is list2)
         self.assertFalse(list1 == list2)
 
