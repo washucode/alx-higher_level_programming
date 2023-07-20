@@ -33,6 +33,10 @@ class TestSquare(TestCase):
         self.assertEqual(new.size, 1)
         self.assertEqual(new.x, 0)
         self.assertEqual(new.y, 0)
+    def test_square1(self):
+        """ tests new square """
+        with self.assertRaises(ValueError):
+            new1 = Square(0)
 
     def test_square2(self):
         """ Test squares with custom values """
