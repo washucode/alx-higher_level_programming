@@ -66,12 +66,12 @@ class TestSquare(TestCase):
 
     def test_incorrect_att6(self):
         """ Test for size string """
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             new11 = Square(1, "string")
 
     def test_incorrect_att7(self):
         """ Test for size string """
-        with self.assertRaises(ValueError):
+        with self.assertRaises(TypeError):
             new12 = Square(1, 1, "string")
 
     def test_incorrect_att8(self):
