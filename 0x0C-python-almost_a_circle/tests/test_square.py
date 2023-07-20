@@ -64,6 +64,24 @@ class TestSquare(TestCase):
         with self.assertRaises(ValueError):
             new11 = Square(0)
 
+    def test_incorrect_att6(self):
+        """ Test for size string """
+        with self.assertRaises(ValueError):
+            new11 = Square(1, "string")
+
+    def test_incorrect_att7(self):
+        """ Test for size string """
+        with self.assertRaises(ValueError):
+            new12 = Square(1, 1, "string")
+
+    def test_incorrect_att8(self):
+        """ Test for negative string """
+        with self.assertRaises(ValueError):
+            new13 = Square(1, -1)
+
+        with self.assertRaises(ValueError):
+            new14 = Square(1, 1, -1)
+
     def test_update(self):
         """ Test update """
         new14 = Square(1, 1, 1, 1)
@@ -190,3 +208,15 @@ class TestSquare(TestCase):
         Square.save_to_file([new33])
         with open("Square.json", "r") as file:
             self.assertEqual(json.dumps([new33.to_dictionary()]), file.read())
+
+    def test_save_to_file1(self):
+        """ Test save to file """
+        Square.save_to_file(None)
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), '[]')
+
+    def test_save_to_file2(self):
+        """ Test save to file """
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), '[]')

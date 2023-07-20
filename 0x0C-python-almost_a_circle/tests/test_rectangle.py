@@ -54,12 +54,14 @@ class TestRectangle(TestCase):
 
         with self.assertRaises(TypeError):
             new6 = Rectangle(1, "string")
-        
+
+    def test_incorrect_att2(self):
+        """ Test for attributes as string """
         with self.assertRaises(TypeError):
-            new7 = Rectangle(1, 1, "string")
-        
+            new7 = Rectangle(1, 1, "3")
+
         with self.assertRaises(TypeError):
-            new8 = Rectangle(1, 1, 1, "string")
+            new8 = Rectangle(1, 1, 1, "4")
 
     def test_incorrect_att4(self):
         """ Test attributes as negative """
@@ -69,9 +71,10 @@ class TestRectangle(TestCase):
         with self.assertRaises(ValueError):
             new10 = Rectangle(1, -1)
 
+    def test_incorrect_att5(self):
+        """ Test attributes as negative """
         with self.assertRaises(ValueError):
-            new11 = Rectangle(1, 1, -1, 1)
-        
+            new11 = Rectangle(1, 1, -1)
         with self.assertRaises(ValueError):
             new12 = Rectangle(1, 1, 1, -1)
 
@@ -146,6 +149,13 @@ class TestRectangle(TestCase):
             res = "\n\n\n\n    #####\n    #####\n    #####\n"
             self.assertEqual(fakeOutput.getvalue(), res)
 
+    def test_display3(self):
+        """ Test for display """
+        new23 = Rectangle(2, 3, 2)
+        with patch('sys.stdout', new=StringIO()) as fakeOutput:
+            new23.display()
+            self.assertEqual(fakeOutput.getvalue(), "  ##\n  ##\n  ##\n")
+
     def test_str(self):
         """ Test for str """
         new23 = Rectangle(4, 6, 2, 1, 12)
@@ -160,7 +170,7 @@ class TestRectangle(TestCase):
         """ Test for update """
         new25 = Rectangle(10, 10, 10, 10)
         new25.update(89)
-        self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 10/10") 
+        self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 10/10")
         new25.update(89, 2)
         self.assertEqual(new25.__str__(), "[Rectangle] (89) 10/10 - 2/10")
         new25.update(89, 2, 3)
@@ -243,3 +253,24 @@ class TestRectangle(TestCase):
         self.assertEqual(type(list2[1]), Rectangle)
         self.assertFalse(list1 is list2)
         self.assertFalse(list1 == list2)
+
+    def test_save_to_file(self):
+        """ Test for save to file """
+        new33 = Rectangle(3, 5, 1, 2, 3)
+        new34 = Rectangle(4, 6, 2, 3, 4)
+        list1 = [new33, new34]
+        Rectangle.save_to_file(list1)
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(type(file.read()), str)
+
+    def test_save_to_file2(self):
+        """ Test for save to file """
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+    def test_save_to_file3(self):
+        """ Test for save to file """
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")

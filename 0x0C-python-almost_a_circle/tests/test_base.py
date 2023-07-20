@@ -106,7 +106,6 @@ class TestBase(TestCase):
         # test string input
         self.assertEqual(Base.to_json_string("string"), '"string"')
 
-
     def test_access_privateatt(self):
         """ test access  to private attribute """
         with self.assertRaises(AttributeError):
