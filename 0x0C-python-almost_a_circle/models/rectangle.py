@@ -86,7 +86,7 @@ class Rectangle(Base):
     def x(self):
         """ Getter for x """
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """ Setter for x """
@@ -100,7 +100,7 @@ class Rectangle(Base):
     def y(self):
         """ Getter for y """
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """ Setter for y """
@@ -109,5 +109,3 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
-
-
