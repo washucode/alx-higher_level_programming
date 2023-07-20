@@ -128,22 +128,22 @@ class TestRectangle(TestCase):
         new22 = Rectangle(2, 3, 2, 2)
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             new22.display()
-            self.assertEqual(fakeOutput.getvalue(), "##\n##\n##\n")
+            self.assertEqual(fakeOutput.getvalue(), "\n\n  ##\n  ##\n  ##\n")
         new22.width = 5
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             new22.display()
-            res = "#####\n#####\n#####\n"
+            res = "\n\n  #####\n  #####\n  #####\n"
             self.assertEqual(fakeOutput.getvalue(), res)
 
         new22.x = 4
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             new22.display()
-            res = "#####\n#####\n#####\n"
+            res = "\n\n    #####\n    #####\n    #####\n"
             self.assertEqual(fakeOutput.getvalue(), res)
         new22.y = 4
         with patch('sys.stdout', new=StringIO()) as fakeOutput:
             new22.display()
-            res = "#####\n#####\n#####\n"
+            res = "\n\n\n\n    #####\n    #####\n    #####\n"
             self.assertEqual(fakeOutput.getvalue(), res)
 
     def test_str(self):

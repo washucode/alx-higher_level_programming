@@ -140,14 +140,14 @@ class TestSquare(TestCase):
         new23 = Square(1, 1, 1, 1)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             new23.display()
-            self.assertEqual(fake_out.getvalue(), '#\n')
+            self.assertEqual(fake_out.getvalue(), '\n #\n')
 
     def test_display1(self):
         """ Test display """
         new24 = Square(2, 2, 2, 2)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             new24.display()
-            self.assertEqual(fake_out.getvalue(), '##\n##\n')
+            self.assertEqual(fake_out.getvalue(), '\n\n  ##\n  ##\n')
 
     def test_str(self):
         """ Test __str__ """

@@ -20,8 +20,10 @@ class Rectangle(Base):
 
     def display(self):
         """ Prints the rectangle using # """
+        rect = self.y * "\n"
         for i in range(self.height):
-            print("#" * self.width)
+            rect += (" " * self.x) + ("#" * self.width) + "\n"
+        print(rect, end="")
 
     def __str__(self):
         """ Returns string representation of Rectangle """
