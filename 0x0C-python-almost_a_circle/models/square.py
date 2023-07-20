@@ -16,6 +16,22 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width)
 
+    def update(self, *args, **kwargs):
+        """ Updates attributes of Square """
+        if args:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.size = arg
+                elif i == 2:
+                    self.x = arg
+                elif i == 3:
+                    self.y = arg
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     @property
     def size(self):
         """ Getter for size """
