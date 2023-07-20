@@ -26,20 +26,18 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """save object to file"""
         filename = "{}.json".format(cls.__name__)
-        
         if not list_objs:
             list_objs = []
-        else: 
+        else:
             list_objs = [i.to_dictionary() for i in list_objs]
 
         with open(filename, 'w') as f:
             f.write(cls.to_json_string(list_objs))
-
 
     @staticmethod
     def from_json_string(json_string):
@@ -47,7 +45,7 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """ Returns instance with all attributes already set """
@@ -57,7 +55,7 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
-    
+
     @classmethod
     def load_from_file(cls):
         """ Returns list of instances """
@@ -66,7 +64,7 @@ class Base:
             return []
         with open(filename, 'r') as f:
             return [cls.create(**i) for i in cls.from_json_string(f.read())]
-        
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """saves to csv file"""
@@ -82,12 +80,10 @@ class Base:
             if list_objs is not None:
                 for obj in list_objs:
                     writer.writerow(obj.to_dictionary())
-    
 
     @classmethod
     def load_from_file_csv(cls):
         """Loads from csv file"""
-
         filename = "{}.csv".format(cls.__name__)
         with open(filename, 'r') as f:
             if cls.__name__ == "Rectangle":

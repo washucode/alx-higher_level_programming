@@ -48,7 +48,7 @@ class TestSquare(TestCase):
         new4 = Square(1, 1, 1, 1)
         self.assertEqual(False, new3 is new4)
         self.assertEqual(False, new3 == new4)
-    
+
     def test_incorrect_att(self):
         """ Test for size as string """
         with self.assertRaises(TypeError):
@@ -102,7 +102,7 @@ class TestSquare(TestCase):
         self.assertEqual(new14.size, 2)
         self.assertEqual(new14.x, 2)
         self.assertEqual(new14.y, 2)
-    
+
     def test_update1(self):
         """ Test update with kwargs """
         new15 = Square(1, 1, 1, 1)
@@ -121,7 +121,6 @@ class TestSquare(TestCase):
         self.assertEqual(new16.x, 2)
         self.assertEqual(new16.y, 2)
 
-
     def incorrect_amt_attrs(self):
         """ Test for incorrect amount of attributes """
         with self.assertRaises(TypeError):
@@ -131,7 +130,7 @@ class TestSquare(TestCase):
         """ Test for incorrect amount of attributes """
         with self.assertRaises(TypeError):
             new17 = Square()
-    
+
     def test_to_dict(self):
         """ Test to_dict """
         new18 = Square(1, 1, 1, 1)
@@ -155,24 +154,24 @@ class TestSquare(TestCase):
             new20.__x
         with self.assertRaises(AttributeError):
             new20.__y
-    
+
     def test_area(self):
         """ Test area """
         new21 = Square(1, 1, 1, 1)
         self.assertEqual(new21.area(), 1)
-    
+
     def test_area1(self):
         """ Test area """
         new22 = Square(2, 2, 2, 2)
         self.assertEqual(new22.area(), 4)
-    
+
     def test_display(self):
         """ Test display """
         new23 = Square(1, 1, 1, 1)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             new23.display()
             self.assertEqual(fake_out.getvalue(), '\n #\n')
-    
+
     def test_display1(self):
         """ Test display """
         new24 = Square(2, 2, 2, 2)
@@ -194,7 +193,7 @@ class TestSquare(TestCase):
         """ Test __str__ """
         new27 = Square(1, 1, 1, 1)
         self.assertEqual(type(new27.__str__()), str)
-    
+
     def test_json_file(self):
         """ Test json file """
         new28 = Square(1, 1, 1, 1)

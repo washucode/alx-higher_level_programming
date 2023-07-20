@@ -17,7 +17,7 @@ class TestBase(TestCase):
     def setUp(self):
         """ Resets nb_objects to 0 """
         Base._Base__nb_objects = 0
-    
+
     def test_id(self):
         """ tests id : default and custom """
         # default
@@ -64,7 +64,7 @@ class TestBase(TestCase):
         """ tests more than one arg """
         with self.assertRaises(TypeError):
             Base(1, 2)
-    
+
     def test_nb_objects(self):
         """ tests nb_objects """
         new1 = Base()
@@ -85,7 +85,7 @@ class TestBase(TestCase):
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as f:
             self.assertEqual(f.read(), "[]")
-    
+
     def test_save_to_file_square(self):
         """ test JSON string to file """
         # test empty list
