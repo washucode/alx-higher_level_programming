@@ -18,11 +18,8 @@ def fetch_url(url):
         Args:
             url : resource url
     """
-    try:
-        r = requests.get(url)
-        print(r.headers['X-Request-Id'])
-    except Exception as e:
-        print(e)
+    r = requests.get(url)
+    print(r.headers['X-Request-Id'])
 
 
 if __name__ == "__main__":
